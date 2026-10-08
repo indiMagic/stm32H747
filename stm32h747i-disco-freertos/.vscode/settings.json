@@ -1,0 +1,11 @@
+{
+  "cmake.useCMakePresets": "always",
+  "cmake.configureOnOpen": true,
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "files.associations": { "*.h": "c", "*.s": "arm", "*.ld": "linkerscript" },
+  "cortex-debug.armToolchainPath": "",
+  "cortex-debug.openocdPath": "openocd",
+  "editor.formatOnSave": false,
+  "files.exclude": { "build": true }
+}

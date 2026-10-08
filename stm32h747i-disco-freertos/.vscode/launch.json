@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CM7 (ST-LINK / OpenOCD)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/Debug/h747_disco_freertos.elf",
+      "device": "STM32H747XI",
+      "configFiles": ["${workspaceFolder}/openocd/stm32h747i-disco-cm7.cfg"],
+      "gdbPath": "gdb-multiarch",
+      "armToolchainPath": "",
+      "runToEntryPoint": "main",
+      "preLaunchTask": "Build (Debug)",
+      "rtos": "FreeRTOS",
+      "liveWatch": { "enabled": true, "samplesPerSecond": 4 }
+    },
+    {
+      "name": "Attach CM7 (no flash)",
+      "type": "cortex-debug",
+      "request": "attach",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/Debug/h747_disco_freertos.elf",
+      "device": "STM32H747XI",
+      "configFiles": ["${workspaceFolder}/openocd/stm32h747i-disco-cm7.cfg"],
+      "gdbPath": "gdb-multiarch"
+    }
+  ]
+}

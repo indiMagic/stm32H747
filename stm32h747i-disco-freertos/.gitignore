@@ -1,0 +1,9 @@
+build/
+*.o
+*.d
+*.map
+*.bin
+*.hex
+.cache/
+compile_commands.json
+.DS_Store
